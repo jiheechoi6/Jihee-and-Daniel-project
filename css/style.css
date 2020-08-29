@@ -20,10 +20,12 @@ html{
 
 /*Header*/
 header{
+	width: 100%;
 	background: rgba(10, 10, 10, 0.8);
 	color: rgba(210, 210, 210);
 	padding: 5px 0 0 0; 
 	min-height: 45px;
+	position:fixed;
 	/*border-bottom: rgba(205, 133, 63, 0.5) 3px solid;*/
 }
 
@@ -71,6 +73,10 @@ header nav{
 
 header a:hover{
     color:#cccccc;
+}
+
+nav a#openup {
+display: none;
 }
 
 /*main*/
@@ -154,6 +160,144 @@ header a:hover{
 #home-footer p{
 	margin-bottom: 5px; 
 }
+
+
+
+
+
+
+
+
+header a{
+	text-decoration: none;
+}
+
+header #branding{
+	margin-left: 130px;
+	font-weight: bold;
+	float: left;
+}
+
+.highlight{
+	color: rgba(230, 230, 230);
+}
+
+header ul{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+header li{
+    float: left;
+    display: inline;
+    padding: 0 40px 0 90px;
+}
+
+header #branding{
+    float: left;
+}
+
+header p{
+    margin:0;
+    margin-top: 4px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+header nav{
+    float: right;
+    margin: 10px 50px 0 0;
+}
+
+header a:hover{
+    color:#cccccc;
+}
+
+/*main*/
+.intro{
+	float:left;
+	width: 50%;
+}
+.intro p{
+	width: 70%;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 600;
+	/*color: #fff;*/
+	color: #505050;
+	margin: auto;
+	margin-top: 230px;
+	margin-left: 27%;
+	margin-bottom: 315.34px;
+}
+
+#signin-area{
+	float: right;
+	width: 50%;
+	margin:auto;
+}
+/*Sign In box*/
+#signin_box{
+	background-color: rgba(300,300,300,0.5);
+	margin: auto;
+	margin-bottom: 290px;
+	margin-top: 190px;
+	width: 380px;
+	height: 100%;
+	overflow: hidden;
+	padding: 1.5rem 0 2rem 0;
+	border-radius: 5px;
+}
+
+#signin_box h1{
+	padding-bottom: 10px;
+}
+
+#signin_box input{
+	padding: 4px;
+	padding-left: 12px;
+	height: 30px;
+	width: 94.5%;
+	border: 0;
+	margin-bottom: 20px;
+	border-radius: 5px;
+}
+
+.button_1{
+	color: #ffebcd;
+	background: rgba(100, 100, 100);
+	border: 0;
+	width: 100%;
+	padding: 10px 10px;
+	border-radius: 5px;
+}
+
+.button_1:hover{
+	background: rgba(105, 105, 105);
+}
+
+#signup-link{
+	margin-top: 18px;
+	margin-bottom: 0;
+}
+
+/*Footer*/
+#home-footer{
+	display: inline-block;
+	width: 100%;
+	border-bottom: 5px;
+	font-size: 12px;
+	text-align: center;
+	color: #151515;
+}
+
+#home-footer p{
+	margin-bottom: 5px; 
+}
+
+
+
 
 
 
