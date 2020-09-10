@@ -1,3 +1,8 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 body{
 	font: 13px/1.5 Arial, Helvetica, sans-serif;
 	padding:0;
@@ -18,71 +23,76 @@ html{
 	overflow: hidden; /*hide anything outside the div (no scroll bar)*/
 }
 
-/*Header*/
-header{
-	width: 100%;
-	background: rgba(10, 10, 10, 0.8);
-	color: rgba(210, 210, 210);
-	padding: 5px 0 0 0; 
+/*Nav Bar*/
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	min-height: 45px;
-	position:fixed;
-	/*border-bottom: rgba(205, 133, 63, 0.5) 3px solid;*/
+	background-color: rgba(10, 10, 10, 0.8);
+	font-family: 'Poppins', sans-serif;
+	position: fixed;
+	width: 100%;
 }
 
-header a{
+nav a:hover{
+	color: white;
+}
+
+.branding{
+	color: rgba(230, 230, 230);
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-weight: 600;
+	padding-left: 10%;
+}
+
+.branding a{
 	text-decoration: none;
-}
-
-header #branding{
-	margin-left: 130px;
-	font-weight: bold;
-	float: left;
-}
-
-.highlight{
 	color: rgba(230, 230, 230);
 }
 
-header ul{
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
+.menu{
+	display: flex;
+	width: 40%;
+	justify-content: space-around;
+	align-content: center;
 }
 
-header li{
-    float: left;
-    display: inline;
-    padding: 0 40px 0 90px;
+.menu li{
+	list-style: none;
+	padding-left: 5%;
 }
 
-header #branding{
-    float: left;
+.menu a{
+	text-decoration: none;
+	color: rgba(210, 210, 210);
+	font-size: 13px;
 }
 
-header p{
-    margin:0;
-    margin-top: 4px;
-    font-size: 22px;
-    font-weight: 600;
+.burger{
+	display: none;
+	cursor: pointer;
 }
 
-header nav{
-    float: right;
-    margin: 10px 50px 0 0;
-}
-
-header a:hover{
-    color:#cccccc;
-}
-
-nav a#openup {
-display: none;
+.burger div{
+	width: 18px;
+	height: 2px;
+	background-color: rgb(210, 210, 210);
+	margin: 3px;
 }
 
 /*main*/
+
+.main{
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
 .intro{
-	float:left;
 	width: 50%;
+	min-height: 100%;
+	padding-left: 10%;
 }
 .intro p{
 	width: 70%;
@@ -92,39 +102,50 @@ display: none;
 	/*color: #fff;*/
 	color: #505050;
 	margin: auto;
-	margin-top: 220px;
-	margin-left: 27%;
-	margin-bottom: 315.34px;
+	margin-top: 45%;
+/*	margin-left: 27%;
+	margin-bottom: 315.34px;*/
 }
 
 #signin-area{
-	float: right;
+	/*float: right;*/
 	width: 50%;
 	margin:auto;
-}
+	padding-right: 7%;
+	/*padding-top: 25%;*/
+	height: 100%;
+	/*display: flex;
+	align-items: top;
+*/}
 /*Sign In box*/
 #signin_box{
+	/*align-items: center;*/
 	background-color: rgba(300,300,300,0.5);
 	margin: auto;
-	margin-bottom: 290px;
-	margin-top: 170px;
+	/*margin-bottom: 290px;*/
+	margin-top: 38%;
 	width: 380px;
-	height: 100%;
+	height: 290px;
 	overflow: hidden;
-	padding: 1.5rem 0 2rem 0;
+	padding: 1.5rem 0 1rem 0;
 	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
 }
 
 #signin_box h1{
-	padding-bottom: 10px;
+	padding-left: 43px;
+	padding-bottom: 29px;
+	padding-top: 5px;
 }
 
 #signin_box input{
 	padding: 4px;
 	padding-left: 12px;
-	height: 30px;
-	width: 94.5%;
+	height: 32px;
+	width: 80%;
 	border: 0;
+	margin: auto;
 	margin-bottom: 20px;
 	border-radius: 5px;
 }
@@ -133,8 +154,9 @@ display: none;
 	color: #ffebcd;
 	background: rgba(100, 100, 100);
 	border: 0;
-	width: 100%;
+	width: 80%;
 	padding: 10px 10px;
+	margin: auto;
 	border-radius: 5px;
 }
 
@@ -143,9 +165,10 @@ display: none;
 }
 
 #signup-link{
-	margin-top: 18px;
-	margin-bottom: 0;
+	font-size: 12px;
+	margin-left: 41px;
 }
+
 
 /*Footer*/
 #home-footer{
@@ -158,146 +181,73 @@ display: none;
 }
 
 #home-footer p{
-	margin-bottom: 5px; 
+	margin-bottom: 0px; 
 }
 
 
 
+/*-------phone version-------*/
+@media screen and (max-width: 768px){
 
-
-
-
-
-header a{
-	text-decoration: none;
+	.menu{
+		width: 42%;
+		position: absolute;
+		right: 0;
+		top: 45px;
+		height: 95vh;
+		background-color: rgb(51, 51, 51, 0.98);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in-out;
+	}
+	.menu li{
+		opacity: 0;
+	}
+	.burger{
+		display: block;
+	}
 }
 
-header #branding{
-	margin-left: 130px;
-	font-weight: bold;
-	float: left;
+@keyframes menuElementsAppear{
+	from{
+		opacity: 0;
+		transform: translate(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translate(0px);
+	}
 }
 
-.highlight{
-	color: rgba(230, 230, 230);
-}
-
-header ul{
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-}
-
-header li{
-    float: left;
-    display: inline;
-    padding: 0 40px 0 90px;
-}
-
-header #branding{
-    float: left;
-}
-
-header p{
-    margin:0;
-    margin-top: 4px;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-header nav{
-    float: right;
-    margin: 10px 50px 0 0;
-}
-
-header a:hover{
-    color:#cccccc;
-}
-
-/*main*/
-.intro{
-	float:left;
-	width: 50%;
-}
-.intro p{
-	width: 70%;
-	text-align: center;
-	font-size: 40px;
-	font-weight: 600;
-	/*color: #fff;*/
-	color: #505050;
-	margin: auto;
-	margin-top: 230px;
-	margin-left: 27%;
-	margin-bottom: 315.34px;
-}
-
-#signin-area{
-	float: right;
-	width: 50%;
-	margin:auto;
-}
-/*Sign In box*/
-#signin_box{
-	background-color: rgba(300,300,300,0.5);
-	margin: auto;
-	margin-bottom: 290px;
-	margin-top: 190px;
-	width: 380px;
-	height: 100%;
-	overflow: hidden;
-	padding: 1.5rem 0 2rem 0;
-	border-radius: 5px;
-}
-
-#signin_box h1{
-	padding-bottom: 10px;
-}
-
-#signin_box input{
-	padding: 4px;
-	padding-left: 12px;
-	height: 30px;
-	width: 94.5%;
-	border: 0;
-	margin-bottom: 20px;
-	border-radius: 5px;
-}
-
-.button_1{
-	color: #ffebcd;
-	background: rgba(100, 100, 100);
-	border: 0;
-	width: 100%;
-	padding: 10px 10px;
-	border-radius: 5px;
-}
-
-.button_1:hover{
-	background: rgba(105, 105, 105);
-}
-
-#signup-link{
-	margin-top: 18px;
-	margin-bottom: 0;
-}
-
-/*Footer*/
-#home-footer{
-	display: inline-block;
-	width: 100%;
-	border-bottom: 5px;
-	font-size: 12px;
-	text-align: center;
-	color: #151515;
-}
-
-#home-footer p{
-	margin-bottom: 5px; 
+@keyframes menuElementsFade{
+	from{
+		opacity: 0.5;
+		transform: translate(0px);
+	}
+	to{
+		opacity: 0;
+		transform: translate(50px);
+	}
 }
 
 
+.menu-active{
+	transform: translate(0%);
+}
 
+.menu-toggle .line1{
+	transform: rotate(-45deg) translate(-4px, 3px);
+}
+
+.menu-toggle .line2{
+	opacity: 0;
+}
+
+.menu-toggle .line3{
+	transform: rotate(45deg) translate(-4px, -3px);	
+}
 
 
 
